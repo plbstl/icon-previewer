@@ -2,7 +2,9 @@
   "recommendations": [
     "adamraichu.zip-viewer",
     "arcanis.vscode-zipfs",
+    "ducfilan.pug-formatter",
     "esbenp.prettier-vscode",
-    "goloveychuk.yarn-pnp-extension"
+    "goloveychuk.yarn-pnp-extension",
+    "syler.sass-indented"
   ]
 }

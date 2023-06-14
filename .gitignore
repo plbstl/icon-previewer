@@ -7,3 +7,6 @@
 .pnp.*
 
 .DS_Store
+
+.parcel-cache
+dist

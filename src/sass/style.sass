@@ -1,0 +1,38 @@
+@use '_normalize'
+
+html
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace
+
+body
+  color: var(--color-text)
+  background-color: var(--color-bg)
+  margin: auto
+  font-size: clamp(12px, 1rem + 2vw, 18px)
+  justify-content: space-between
+  width: clamp(128px, 90%, 800px)
+
+li
+  list-style-type: none
+
+a, button
+  color: inherit
+
+header
+  text-align: center
+  h1
+    margin: 1.75em 0
+    text-align: center
+    color: var(--color-primary)
+    font-size: 1.5em
+    font-weight: 500
+
+footer
+  text-align: center
+  filter: contrast(0.4)
+  font-size: 0.75em
+  margin-top: 3rem
+
+.testing
+  text-align: center
+  font-size: 2rem
+  letter-spacing: 2px

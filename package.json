@@ -3,8 +3,19 @@
   "private": true,
   "license": "MIT",
   "packageManager": "yarn@3.6.0",
+  "source": "src/index.pug",
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
+  "scripts": {
+    "start": "rimraf dist && parcel serve",
+    "build": "rimraf .parcel-cache dist && parcel build --no-source-maps"
+  },
   "devDependencies": {
-    "prettier": "next"
+    "@parcel/core": "^2.9.2",
+    "@parcel/transformer-pug": "^2.9.2",
+    "@parcel/transformer-sass": "^2.9.2",
+    "parcel": "^2.9.2",
+    "prettier": "next",
+    "rimraf": "^5.0.1"
   },
   "prettier": {
     "printWidth": 120,

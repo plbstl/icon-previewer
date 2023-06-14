@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="./sass/style.sass")
+    link(rel="stylesheet" href="./sass/light.sass" media="(prefers-color-scheme: light)")
+    link(rel="stylesheet" href="./sass/dark.sass" media="(prefers-color-scheme: dark)")
+    title Icon Previewer
+  body
+    header
+      h1 Icon Previewer
+    main
+      p.testing ...&mldr;...
+    footer
+      p Preview your PWA, iOS, iPadOS, Android, Windows, MacOS or Linux application icon on your real devices without any setup.
+      p
+        span &copy;
+        time(datetime="2023")  2023
+        span  Paul Ebose
+    script(type="module" src="./ts/main.ts")

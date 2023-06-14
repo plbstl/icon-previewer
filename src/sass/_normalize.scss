@@ -1,0 +1,398 @@
+/* modern normalize & css remedy */
+/* i took what i needed */
+
+/*
+==============================================================================================================
+  Modern Normalize - https://github.com/sindresorhus/modern-normalize b8025616e23c59f42ea1f9745a229d938eab9e33
+==============================================================================================================
+*/
+
+/* ==== Document ==== */
+
+/*
+  Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/*
+  1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+  2. Prevent adjustments of font size after orientation changes in iOS.
+  3. Use a more readable tab size (opinionated).
+*/
+html {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+}
+
+/* ==== Sections ==== */
+
+/*
+  Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/* ==== Text-level semantics ==== */
+
+/*
+  Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/*
+  Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+  Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/* ==== Forms ==== */
+
+/*
+  1. Change the font styles in all browsers.
+  2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/*
+  Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/*
+  Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/*
+  Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/*
+  Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/*
+  Remove the additional ':invalid' styles in Firefox.
+  See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+  Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/*
+  1. Correct the inability to style clickable types in iOS and Safari.
+  2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* ==== Interactive ==== */
+
+/*
+  Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+/*
+===============================================================================================
+  CSS Remedy - https://github.com/jensimmons/cssremedy 6590d9630bdd324469620636d85b7ea3753e9a7b
+===============================================================================================
+*/
+
+/* @docs
+  label: Line Sizing
+
+  note: |
+    Consistent line-spacing,
+    even when inline elements have different line-heights.
+
+  links:
+    - https://drafts.csswg.org/css-inline-3/#line-sizing-property
+
+  category: global
+*/
+html {
+  line-sizing: normal;
+}
+
+/* @docs
+  label: Hidden Attribute
+
+  note: |
+    Maintain `hidden` behavior when overriding `display` values.
+
+  category: global
+*/
+[hidden] {
+  display: none;
+}
+
+/* @docs
+  label: Heading Sizes
+
+  note: |
+    Switch to rem units for headings
+
+  category: typography
+*/
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.17rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.83rem;
+}
+h6 {
+  font-size: 0.67rem;
+}
+
+/* @docs
+  label: H1 Margins
+
+  note: |
+    Keep h1 margins consistent, even when nested.
+
+  category: typography
+*/
+h1 {
+  margin: 0.67em 0;
+}
+
+/* @docs
+  label: Horizontal Rule
+
+  note: |
+    1. Solid, thin horizontal rules
+    2. Remove Firefox `color: gray`
+    3. Remove default `1px` height, and common `overflow: hidden`
+
+  category: typography
+*/
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* @docs
+  label: Responsive Embeds
+
+  note: |
+    1. Block display is usually what we want
+    2. The `vertical-align` removes strange space-below in case authors overwrite the display value
+    3. Responsive by default
+    4. Audio without `[controls]` remains hidden by default
+
+  category: embedded elements
+*/
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+audio:not([controls]) {
+  display: none;
+}
+
+/* @docs
+  label: Aspect Ratios
+
+  note: |
+    Maintain intrinsic aspect ratios when `max-width` is applied.
+    `iframe`, `embed`, and `object` are also embedded,
+    but have no intrinsic ratio,
+    so their `height` needs to be set explicitly.
+
+  category: embedded elements
+*/
+img,
+svg,
+video,
+canvas {
+  height: auto;
+}
+
+/* @docs
+  label: Audio Width
+
+  note: |
+    There is no good reason elements default to 300px,
+    and audio files are unlikely to come with a width attribute.
+
+  category: embedded elements
+*/
+audio {
+  width: 100%;
+}
+
+/* @docs
+  label: List Style
+
+  note: |
+    List styling is not usually desired in navigation,
+    but this also removes list-semantics for screen-readers
+
+  links:
+    - https://github.com/mozdevs/cssremedy/issues/15
+
+  category: navigation
+*/
+nav ul {
+  list-style: none;
+}
+
+/* @docs
+  label: List Voiceover
+
+  note: |
+    1. Add zero-width-space to prevent VoiceOver disable
+    2. Absolute position ensures no extra space
+
+  links:
+    - https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/
+
+  category: navigation
+*/
+nav li:before {
+  content: "\200B";
+  position: absolute;
+}
+
+/* @docs
+  label: Reduced Motion
+
+  note: |
+    1. Immediately jump any animation to the end point
+    2. Remove transitions & fixed background attachment
+
+  links:
+    - https://github.com/mozdevs/cssremedy/issues/11
+
+  category: accessibility
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+/* @docs
+  label: Line Heights
+
+  note: |
+    The default `normal` line-height is tightly spaced,
+    but takes font-metrics into account,
+    which is important for many fonts.
+    Looser spacing may improve readability in latin type,
+    but may cause problems in some scripts --
+    from cursive/fantasy fonts to
+    [Javanese](https://jsbin.com/bezasax/1/edit?html,css,output),
+    [Persian](https://jsbin.com/qurecom/edit?html,css,output),
+    and CJK languages.
+
+  links:
+    - https://github.com/mozdevs/cssremedy/issues/7
+    - https://jsbin.com/bezasax/1/edit?html,css,output
+    - https://jsbin.com/qurecom/edit?html,css,output
+
+  todo: |
+    - Use `:lang(language-code)` selectors?
+    - Add typography remedies for other scripts & languages...
+
+  category: typography
+*/
+html {
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+}
+caption,
+figcaption,
+label,
+legend {
+  line-height: 1.375;
+}

@@ -1,6 +1,7 @@
 {
   "name": "icon-previewer",
   "private": true,
+  "license": "MIT",
   "packageManager": "yarn@3.6.0",
   "devDependencies": {
     "prettier": "next"

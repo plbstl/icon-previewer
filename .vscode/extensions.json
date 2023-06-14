@@ -4,6 +4,7 @@
     "arcanis.vscode-zipfs",
     "ducfilan.pug-formatter",
     "esbenp.prettier-vscode",
+    "github.vscode-github-actions",
     "goloveychuk.yarn-pnp-extension",
     "syler.sass-indented"
   ]

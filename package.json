@@ -5,14 +5,9 @@
   "packageManager": "yarn@3.6.0",
   "source": "src/index.pug",
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
-  "targets": {
-    "default": {
-      "distDir": "docs"
-    }
-  },
   "scripts": {
     "start": "rimraf dist && parcel serve",
-    "build": "rimraf docs .parcel-cache && parcel build --public-url ./ --no-source-maps"
+    "build": "rimraf dist .parcel-cache && parcel build --public-url ./ --no-source-maps"
   },
   "devDependencies": {
     "@parcel/core": "^2.9.2",

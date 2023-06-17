@@ -1,13 +1,3 @@
-import Masonry from './masonry'
+import { change } from './event-handlers'
 
-const masonry = new Masonry({
-  container: '.cards',
-  baseWidth: 128,
-  surroundingGutter: false,
-  gutter: 24,
-  ultimateGutter: 16,
-})
-
-// img.clientHeight affects masonry layout
-const hardcodedSelector = 'body > main > .cards > .card:nth-child(5) > .preview > img'
-;(document.querySelector(hardcodedSelector) as HTMLImageElement).onload = masonry.layout
+document.querySelector('#icon')?.addEventListener('change', change)

@@ -23,7 +23,11 @@ function handleFiles(files: FileList | null) {
     cardPreview.appendChild(cardPreviewImg)
 
     const cardCaption = elem('div', 'caption')
-    const cardCaptionText = elem('p', undefined, ['Tap here to edit'])
+    const cardCaptionText = elem('textarea', undefined, ['Tap here to edit'])
+    cardCaptionText.style.height = '26px'
+    cardCaptionText.addEventListener('focus', (ev) => selectAllText(ev.target as HTMLTextAreaElement))
+    cardCaptionText.addEventListener('keydown', blurTextareaWithEnterKey)
+    cardCaptionText.addEventListener('input', (ev) => resizeTextarea(ev.target as HTMLTextAreaElement))
     cardCaption.appendChild(cardCaptionText)
 
     card.appendChild(cardPreview)
@@ -65,4 +69,26 @@ function img(file: File, cardContainer: HTMLElement, masonry: Masonry): HTMLImag
   return img
 }
 
-export { handleFiles }
+function selectAllText(textarea: HTMLTextAreaElement) {
+  textarea.select()
+}
+
+function blurTextareaWithEnterKey(event: KeyboardEvent) {
+  // allow `shift+enter` for newline
+  if (event.key !== 'Enter') {
+    return
+  }
+  if (event.shiftKey) {
+    return
+  }
+  const textarea = event.target as HTMLTextAreaElement
+  textarea.blur()
+}
+
+function resizeTextarea(textarea: HTMLTextAreaElement) {
+  textarea.style.height = '0px'
+  textarea.style.height = `${textarea.scrollHeight}px`
+  masonry.layout()
+}
+
+export { blurTextareaWithEnterKey, handleFiles, resizeTextarea, selectAllText }

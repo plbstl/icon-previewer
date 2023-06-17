@@ -1,0 +1,32 @@
+.cards
+  position: relative
+
+.card
+  position: absolute
+  overflow: hidden
+  &:hover
+    filter: var(--filter-drop-shadow)
+  &:hover :is(.caption)
+    background-color: var(--color-card-bg)
+
+.preview:hover :is(img)
+  filter: brightness(0.9)
+
+img
+  border-radius: 20%
+  width: 100%
+
+.caption
+  display: flex
+  padding: 0.5rem
+  margin-top: 12px
+  width: 100%
+  min-height: 40px
+
+.caption p
+  text-align: center
+  line-height: 1.5
+  font-size: 0.83em
+  font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif
+  margin: auto
+  width: fit-content

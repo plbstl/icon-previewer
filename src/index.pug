@@ -12,7 +12,27 @@ html(lang="en")
     header
       h1 Icon Previewer
     main
-      p.testing ...&mldr;...
+      .cards
+        mixin card(caption, src)
+          .card
+            .preview
+              img(src=src alt=caption)
+            .caption
+              p= caption
+        +card('Opera', "https://play-lh.googleusercontent.com/arHjD1CpUMbdhSFv5FXN2ckVcYMD4_49Mv80TBDx1YLKLZ36g4MM07zz8Q3r2Eyi2pd2")
+        +card('League of Legends: Wild Rift', "https://play-lh.googleusercontent.com/ZGYP02w_hO8wlc5I3-TJjNgtnNSeM8Vf8ZfO3u34CbktMk1t6PGAPN5d7znoEiQ6dWc")
+        +card('Firefox Beta', "https://play-lh.googleusercontent.com/3h9q6PWEpWJ9MwmkiYpQKyfWuTiiQHJZI3ntzzH8wLzmMJF1B_Z83xQAFNxgbPC54g")
+        +card('Lords Mobile: Kingdom Wars', "https://play-lh.googleusercontent.com/oFz-KTIgL6yAuuA5XeHapTQLDcoBVgA9JXCTiID70rPcJBGAT9DdiqNDjNLxcYaG6W3W")
+        +card('GitHub Codespaces', "https://github.gallerycdn.vsassets.io/extensions/github/codespaces/1.14.8/1686605565955/Microsoft.VisualStudio.Services.Icons.Default")
+        +card('Chrome', "https://play-lh.googleusercontent.com/KwUBNPbMTk9jDXYS2AeX3illtVRTkrKVh5xR1Mg4WHd0CG2tV4mrh1z3kXi5z_warlk")
+        +card('Call of Duty', "https://play-lh.googleusercontent.com/WjXoRzJKWHJ_x52qWYA6ECM70bq3x0vwwYiBhzLXdOIHCo-obdUTztPbskEn0K8_wBs")
+        +card('Brave', "https://play-lh.googleusercontent.com/I1foi2Irrv7tW9ee9kgP0wfnMzaVb6y17muvpKsFcUrKYsDlmCyWuTRh5m93KJZ24dY")
+        +card('Duolingo', "https://play-lh.googleusercontent.com/hSyebBlYwtE2aMjzSIHasUO9cQv9HgNAw9owy6ADO0szOKYO3rDk60r7jcyXu82Fbq1M")
+        +card('Gmail', "https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI")
+        +card('Firefox Focus', "https://play-lh.googleusercontent.com/yssuOUUgzoiZve-NfSvkykhAP9QbnFEL-NfLNHmTjnAcLCMnEpZsvwg1brdSuRZrqg")
+        +card('GitHub', "https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU")
+        +card('Edge', "https://play-lh.googleusercontent.com/VYvJqGnrQiKkbbyLyMeiL-GM3go4tBIA64uVEGQazLXD4p_M3F45kHyt42o_6d5VXA")
+        +card('Candy Crush Saga', "https://play-lh.googleusercontent.com/gU9NKwpgLDYA6LIYK4dnkAkVyqNHUfTIqklEiNuO4oZ2OCpWQhQdqhnDh8Yb9B8SWIM")
     footer
       p Preview your PWA, iOS, iPadOS, Android, Windows, MacOS or Linux application icon on your real devices without any setup.
       p

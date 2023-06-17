@@ -1,4 +1,5 @@
 @use '_normalize'
+@use '_animate/pulse'
 @use '_cards'
 
 html
@@ -32,3 +33,35 @@ footer
   filter: contrast(0.4)
   font-size: 0.75em
   margin-top: 3rem
+
+label[for=icon]
+  cursor: pointer
+  font-size: 1.75em
+  aspect-ratio: 1/1
+  display: flex
+  justify-content: center
+  align-items: center
+  color: gray
+  box-shadow: 0 0 1px var(--color-card-box-shadow)
+  background-color: var(--color-card-bg)
+  border-radius: 20%
+  &:has(> input.visually-hidden:is(:focus, :focus-within))
+    outline: thin dashed
+
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip-path: circle(0)
+  white-space: nowrap
+  border-width: 0
+
+.visually-hidden
+  position: absolute !important
+  height: 1px
+  width: 1px
+  overflow: hidden
+  clip-path: circle(0.1px)

@@ -13,6 +13,10 @@ html(lang="en")
       h1 Icon Previewer
     main
       .cards
+        label.pulse.card(for="icon")
+          input.visually-hidden(multiple type="file" accept="image/*" name="icon" id="icon")
+          p +
+          span.sr-only Upload icon
         mixin card(caption, src)
           .card
             .preview

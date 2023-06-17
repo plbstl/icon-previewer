@@ -1,0 +1,23 @@
+@keyframes pulse
+  from
+    transform: scale3d(1, 1, 1)
+    filter: brightness(1)
+  50%
+    transform: scale3d(1.05, 1.05, 1.05)
+    filter: brightness(1.2)
+  to
+    transform: scale3d(1, 1, 1)
+    filter: brightness(1)
+
+.pulse
+  animation-name: pulse
+  animation-duration: 3s
+  animation-iteration-count: 4
+  animation-timing-function: ease-in-out
+  animation-fill-mode: both
+
+@media print, (prefers-reduced-motion: reduce)
+  .pulse
+    animation-duration: 1ms !important
+    transition-duration: 1ms !important
+    animation-iteration-count: 1 !important

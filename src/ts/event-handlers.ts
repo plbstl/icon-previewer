@@ -1,7 +1,34 @@
 import { handleFiles } from './file-uploads'
 
-function change(event: Event) {
+export function change(event: Event) {
   handleFiles((event.target as HTMLInputElement).files)
 }
 
-export { change }
+export function dragenter(e: DragEvent) {
+  e.stopPropagation()
+  e.preventDefault()
+  document.body.classList.add('dragging')
+}
+
+export function dragleave(e: DragEvent) {
+  e.stopPropagation()
+  e.preventDefault()
+  document.body.classList.remove('dragging')
+}
+
+export function dragover(e: DragEvent) {
+  e.stopPropagation()
+  e.preventDefault()
+  document.body.classList.add('dragging')
+}
+
+export function drop(e: DragEvent) {
+  e.stopPropagation()
+  e.preventDefault()
+
+  const dt = e.dataTransfer
+  const files = dt?.files
+
+  handleFiles(files || null)
+  document.body.classList.remove('dragging')
+}
